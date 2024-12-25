@@ -17,7 +17,7 @@ resource "aws_lb_target_group" "component" {
 
 module "component" {
   source                 = "terraform-aws-modules/ec2-instance/aws"
-  ami = data.aws_ami.centos8.id
+  ami = data.aws_ami.rhel_info.id
   name                   = "${local.name}-${var.tags.Component}-ami"
   instance_type          = "t2.micro"
   vpc_security_group_ids = [var.component_sg_id]
