@@ -41,7 +41,7 @@ resource "null_resource" "component" {
   connection {
     host = module.component.private_ip
     type = "ssh"
-    user = "centos"
+    user = "ec2-user"
     password = "DevOps321"
   }
 
